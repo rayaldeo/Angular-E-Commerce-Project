@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private server:ServerService) { }
 
-  ngOnInit(): void {
+  events: any[] =[];
+  currentEvent: any = {id: null, name: '', description: '', date: new Date()};
+
+  ngOnInit(){
+    this.getEvents();
   }
+
+
+  private getEvents() {
+    this.server.getEvents().then((response: any) => {
+      console.log('Response', response);
+      });
+    }
 
 }
