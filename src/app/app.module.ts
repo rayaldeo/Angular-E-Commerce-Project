@@ -12,7 +12,6 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { OktaAuthModule } from '@okta/okta-angular';
 
 
 @NgModule({
@@ -30,12 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     MatTabsModule,
     MatListModule
-    // OktaAuthModule.initAuth({
-    //   issuer: 'https://dev-370428-admin.com/oauth2/default',
-    //   redirectUri: 'http://localhost:4200/implicit/callback',
-    //   clientId: '0oar8060h4GAGLZvH4x6'
-    // })
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
