@@ -1,4 +1,4 @@
-export class Produce{
+export interface Produce{
   id:number;
   farmerid:number;
   name:string;

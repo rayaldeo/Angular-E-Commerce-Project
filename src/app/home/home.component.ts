@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from '../server.service';
+import { Produce } from '../api/Produce';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +11,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private server:ServerService) { }
 
-  events: any[] =[];
-  currentEvent: any = {id: null, name: '', description: '', date: new Date()};
+  public events: Produce[]=[];
+  currentProduce:Produce;
 
   ngOnInit(){
-    this.getEvents();
+
+    this.server.getEvents().subscribe(data => {console.log(this.events=data)});
+
   }
-
-
-  private getEvents() {
-    this.server.getEvents().then((response: any) => {
-      console.log('Response', response);
-      });
-    }
 
 }
