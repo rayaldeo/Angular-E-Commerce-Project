@@ -12,9 +12,10 @@
       <div class="row">
         <div class="col-md-4" *ngFor="let currentProduce of events">
           <div class="card mb-4 shadow-sm" >
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{currentProduce.name}}</text></svg>
+            <img alt="Produce" src="assets/{{currentProduce.type}}.png">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text class="label_text" y="50%" fill="#eceeef" dy=".3em">{{currentProduce.name}}</text></svg>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">{{currentProduce.description}}This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -29,3 +30,17 @@
     </div>
 
   </div>
+
+  <!--Main layout-->
+  <main class=" m-0 p-0">
+    <div class="container-fluid m-0 p-0">
+
+      <!--Google map-->
+      <div id="map-container-google-4" class="z-depth-1-half map-container-4" style="height: 500px">
+        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+          style="border:0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </main>
+  <!--Main layout-->

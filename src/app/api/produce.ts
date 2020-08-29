@@ -4,5 +4,6 @@ export interface Produce{
   name:string;
   startdate:string;
   expirationdate: string;
+  type: string;
   description:string;
 }
