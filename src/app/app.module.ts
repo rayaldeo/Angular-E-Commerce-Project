@@ -18,7 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
