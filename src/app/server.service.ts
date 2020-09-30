@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { Produce } from './api/Produce';
+import { User } from './api/User';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable({
@@ -26,8 +27,12 @@ export class ServerService {
       });
     }
 
-    getEvents():Observable<Produce[]> {
-      return this.http.get<Produce[]>(`${environment.serverUrl}/event`);
+    getProduce():Observable<Produce[]> {
+      return this.http.get<Produce[]>(`${environment.serverUrl}/produce`);
+    }
+
+    getUser(email:string, password:string):Observable<User[]>{
+      return this.http.get<User[]>(`${environment.serverUrl}/users/email.password`);
     }
 
     // createEvent(event) {

@@ -58,7 +58,7 @@
                   <img class="login_image" src="assets/unknown_login_icon_shrink.png" alt="">
               </div>
               <div class="col-4">
-                <a class="nav-link " href="contact.html">Login</a>
+                <a  role="button" class="nav-link" (click) = "show()" >Login</a>
               </div>
             </div>
           </div>
@@ -68,10 +68,6 @@
   </div>
 </nav>
 
-<div class="container">
-<h1 class="text-center">Login with bootstrap popup</h1>
-<button type="button" class="btn btn-primary" (click) = "show()">Login</button>
-</div>
 <!-- Creates the bootstrap modal where the image will appear -->
 <div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">

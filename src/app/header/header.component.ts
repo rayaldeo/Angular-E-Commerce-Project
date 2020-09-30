@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ServerService } from '../server.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -18,7 +20,7 @@ export class HeaderComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder : FormBuilder) {}
+  constructor(private formBuilder : FormBuilder,private server:ServerService) {}
 
   show()
   {
@@ -41,6 +43,7 @@ export class HeaderComponent implements OnInit {
 
   onSubmit(){
     this.submitted = true;
+    console.log("The form has been submitted");
     //stop here if  form is invalid
     if( this.registerForm.invalid)
     {
@@ -50,6 +53,12 @@ export class HeaderComponent implements OnInit {
     if( this.submitted)
     {
       this.showModal = false;
+      console.log(this.registerForm.get('email').value);
+      console.log(this.registerForm.get('password').value);
+      //this.server.getUser().subscribe(data => {console.log(this.events=data)});
     }
   }
+
+
+
 }

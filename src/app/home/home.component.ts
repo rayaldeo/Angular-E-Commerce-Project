@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
 
-    this.server.getEvents().subscribe(data => {console.log(this.events=data)});
+    this.server.getProduce().subscribe(data => {console.log(this.events=data)});
 
   }
 
